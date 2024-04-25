@@ -1,4 +1,4 @@
-# Natural Language Processing Term Project
+# Natural Language Processing Term Project (On Dev!)
 
 This repository contains the code and documentation for our term project in the course titled "Natural Language Processing". Our project focuses on the diacritization of the Turkish language.
 
