@@ -1,3 +1,6 @@
+# @Taken from: 
+# https://github.com/victoresque/pytorch-template
+
 import os
 import logging
 from pathlib import Path

@@ -1,3 +1,6 @@
+# Template is taken from https://github.com/victoresque/pytorch-template 
+# Revised and adapted to our NLP project by: Muhammet Serdar NAZLI and Hasan Taha BAĞCI
+
 import numpy as np
 import torch
 from torchvision.utils import make_grid
