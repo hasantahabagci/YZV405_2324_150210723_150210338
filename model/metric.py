@@ -18,3 +18,18 @@ def top_k_acc(output, target, k=3):
         for i in range(k):
             correct += torch.sum(pred[:, i] == target).item()
     return correct / len(target)
+
+
+def acc_overall(test_result, testgold):
+
+  correct = 0
+  total = 0
+  # count number of correctly diacritized words
+  for i in range(len(testgold)):
+    for m in range(len(testgold[i].split())):
+      if test_result[i].split()[m] == testgold[i].split()[m]:
+        correct += 1
+      total +=1
+
+  return correct / total
+
