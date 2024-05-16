@@ -22,7 +22,7 @@ In the realm of natural language processing (NLP), diacritization is a challengi
         result = try_a_sentence(sentence)          
         print(result)                              
         
-        output: NLP modeli neden terapiye gitmiş? Çünkü çok fazla çözülmemiş cümlesi varmış!
+        # output: NLP modeli neden terapiye gitmiş? Çünkü çok fazla çözülmemiş cümlesi varmış!
         ```
 
     
