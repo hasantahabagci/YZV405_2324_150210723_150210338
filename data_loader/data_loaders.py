@@ -1,4 +1,4 @@
-# @Author: M.Serdar NAZLI, Istanbul Technical University. 
+# @Author: M.Serdar NAZLI and Hasan Taha BAĞCI, Istanbul Technical University. 
 # @Date: 27/04/2024 
 # Prepared for the NLP project.
 
