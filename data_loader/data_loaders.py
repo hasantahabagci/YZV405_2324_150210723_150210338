@@ -2,30 +2,28 @@
 # @Date: 27/04/2024 
 # Prepared for the NLP project.
 
-from torch.utils.data import Dataset 
-from base import BaseDataLoader
-import csv 
+import torch 
+from torch.utils.data import Dataset
 
-
-class DiacritizationDataset(Dataset):
-    def __init__(self, file_path):
-        self.data = []
-        with open(file_path, 'r', encoding='utf-8') as file:
-            reader = csv.reader(file)
-            next(reader)  
-            for row in reader:
-                _, sentence = row
-                self.data.append(sentence)
+class SentenceDataset(Dataset):
+    def __init__(self, dataframe):
+        self.data = dataframe
 
     def __len__(self):
         return len(self.data)
 
-    def __getitem__(self, index):
-        return self.data[index]
-    
+    def __getitem__(self, idx):
+        original_tokens = torch.tensor(self.data.iloc[idx]['Sentence_tokens'], dtype=torch.long)
+        poisoned_tokens = torch.tensor(self.data.iloc[idx]['Poisoned_tokens'], dtype=torch.long)
+        return poisoned_tokens, original_tokens
 
-def create_data_loaders(file_path, batch_size, shuffle=True, validation_split=0.0, num_workers=0):
-    dataset = DiacritizationDataset(file_path)
-    data_loader = BaseDataLoader(dataset, batch_size, shuffle, validation_split, num_workers)
-    valid_data_loader = data_loader.split_validation()
-    return data_loader, valid_data_loader
+
+class SentenceDatasetTest(Dataset):
+    def __init__(self, sentences_tokens):
+        self.sentences_tokens = sentences_tokens
+
+    def __len__(self):
+        return len(self.sentences_tokens)
+
+    def __getitem__(self, idx):
+        return torch.tensor(self.sentences_tokens[idx], dtype=torch.long)
