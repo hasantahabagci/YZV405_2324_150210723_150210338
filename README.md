@@ -2,6 +2,41 @@
 
 This repository contains the code and documentation for our term project in the course titled "Natural Language Processing". Our project focuses on the diacritization of the Turkish language using a bi-directional Long Short-Term Memory (LSTM) network.
 
+## Repository Structure
+
+```bash
+YZV405_2324_150210723_150210338/
+
+├── data_loader/
+│   ├── constantsForData.py
+│   ├── data_loaders.py
+│   └── utils.py
+├── model/
+│   ├── loss.py
+│   ├── model.py
+│   └── trainer.py
+├── .gitignore
+├── LICENSE
+├── README.md
+├── main.ipynb
+├── playground.ipynb
+├── requirements.txt
+├── submission.csv
+├── test.csv
+├── train.csv
+├── train_modified.csv
+├── new_data.csv
+├── news.csv
+├── turkishaddresses.csv
+├── turkishaddresses_indexed.csv
+├── wiki.tr_indexed.txt
+├── wiki.tr.txt
+└── model_best.pth
+
+```
+
+
+
 ## Introduction
 In the realm of natural language processing (NLP), diacritization is a challenging task that involves adding diacritical marks to letters, which significantly impacts the meaning, pronunciation, and grammatical context of words in many languages. Our work explores innovative approaches to tackle the diacritization problem, particularly focusing on the Turkish language.
 
